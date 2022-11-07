@@ -1,9 +1,9 @@
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-// import JsFileDownloader from "js-file-downloader";
+import JsFileDownloader from "js-file-downloader";
 
 const AboutUs = () => {
-  // const fileUrl = "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf";
+  const fileUrl = "/documents/CERTIFICATE IN HOSPITALITY OPERATIONS.pdf";
 
   return (
     <Box
@@ -48,7 +48,7 @@ const AboutUs = () => {
         fontSize="24px"
         fontWeight="700"
         transition="all ease 0.5s"
-        // onClick={() => new JsFileDownloader({ url: fileUrl })}
+        onClick={() => new JsFileDownloader({ url: fileUrl })}
         _hover={{
           bg: "#142413",
         }}

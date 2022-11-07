@@ -15,7 +15,7 @@ const Index = () => {
     <Box>
       <Navbar />
       <OurGoals />
-      <Box w="80%" h="2px" bg="#C9CECA" mx="auto" my="65px" />
+      <Box w="1200px" h="2px" bg="#C9CECA" mx="auto" my="65px" />
       <AboutUs />
       <Philosophy />
       <OurWork />

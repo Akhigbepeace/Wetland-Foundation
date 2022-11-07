@@ -1,6 +1,6 @@
 import { Box, Grid, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-// import JsFileDownloader from "js-file-downloader";
+import JsFileDownloader from "js-file-downloader";
 import image from "assets/image.png";
 
 const Directions = () => {
@@ -66,7 +66,6 @@ const Directions = () => {
             2 Ahmed Onibudo street, off Adeola Hopewell, Victoria Island Lagos.
           </Text>
           <Heading
-            // lineHeight="50px"
             fontFamily="Mulish"
             fontSize="28px"
             fontWeight="700"
@@ -74,7 +73,6 @@ const Directions = () => {
             +234 703 144 7139
           </Heading>
           <Heading
-            // lineHeight="50px"
             fontFamily="Mulish"
             fontSize="28px"
             fontWeight="700"
@@ -102,7 +100,7 @@ const Directions = () => {
                 w="188px"
                 h="162px"
                 cursor="pointer"
-                // onClick={() => new JsFileDownloader({ url: download.fileUrl })}
+                onClick={() => new JsFileDownloader({ url: download.fileUrl })}
                 _hover={{
                   transform: "scale(1.1)",
                   transition: "all 0.5s ease",
