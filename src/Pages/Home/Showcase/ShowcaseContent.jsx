@@ -17,7 +17,7 @@ const ShowcaseContent = () => {
       hoverBorder: "#142413",
       hoverColor: "#BDE3AB",
       to: () => {
-        navigate("", { replace: true });
+        navigate("/partners", { replace: true });
       },
     },
     {
@@ -25,7 +25,7 @@ const ShowcaseContent = () => {
       name: "Donate",
       hoverBg: "#EBEDEF",
       to: () => {
-        navigate("/partners", { replace: true });
+        navigate("#", { replace: true });
       },
     },
   ];
@@ -67,6 +67,7 @@ const ShowcaseContent = () => {
                 border="2px solid #2C4E2A"
                 borderRadius="2px"
                 transition="all ease 0.5s"
+                onClick={donate.to}
                 _hover={{
                   bg: donate.hoverBg,
                   color: donate.hoverColor,
