@@ -1,10 +1,11 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Link } from "@chakra-ui/react";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, NavLink } from "react-router-dom";
 import Search from "component/Search";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
     {
@@ -12,12 +13,14 @@ const Navbar = () => {
       redirect: () => {
         navigate("/partners", { replace: true });
       },
+      to: "/partners",
     },
     {
       name: "Profile",
       redirect: () => {
         navigate("/profile", { replace: true });
       },
+      to: "/profile",
     },
   ];
 
@@ -25,19 +28,17 @@ const Navbar = () => {
     navigate("/", { replace: true });
   };
   return (
-    <Box bg="#FFF" position="sticky" top="0">
-      <Flex
-        pt="30px"
-        justifyContent="space-between"
-        w={{
-          sm: "300px",
-          md: "500px",
-          lg: "750px",
-          xl: "1200px",
-          "2xl": "1300px",
-        }}
-        mx="auto"
-      >
+    <Box
+      w={{
+        sm: "300px",
+        md: "500px",
+        lg: "750px",
+        xl: "1200px",
+        "2xl": "1300px",
+      }}
+      mx="auto"
+    >
+      <Flex my="30px" justifyContent="space-between" w="100%" zIndex="6">
         <Image
           src="https://res.cloudinary.com/wavecrest1/image/upload/v1666349401/wetland/logo_yx26cs.png"
           w="110px"
@@ -53,17 +54,23 @@ const Navbar = () => {
 
           {navLinks.map((navLink, index) => {
             return (
-              <Text
+              <Link
                 key={index}
+                as={NavLink}
+                to={navLink.to}
                 fontFamily="Mulish"
                 fontSize="24px"
                 fontWeight="400"
                 cursor="pointer"
                 ml="87px"
-                onClick={navLink.redirect}
+                borderBottom={
+                  location.pathname.includes(navLink.redirect)
+                    ? "8px solid #2C4E2A"
+                    : "transparent"
+                }
               >
                 {navLink.name}
-              </Text>
+              </Link>
             );
           })}
 

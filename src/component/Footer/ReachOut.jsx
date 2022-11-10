@@ -60,10 +60,10 @@ const ReachOut = () => {
               target="_blank"
               bg="#FFF"
               borderRadius="100%"
-              p="10px"
+              p="10px 10px 5px 10px"
               mr="51px"
             >
-              <Icon as={media.icon} w="30px" h="30px" color="#2C4E2A" />
+              <Icon as={media.icon} w="20px" h="20px" color="#2C4E2A" />
             </Link>
           );
         })}
