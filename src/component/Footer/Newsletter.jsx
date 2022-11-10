@@ -80,6 +80,8 @@ const Newsletter = () => {
                 name={field.name}
                 value={inputField[field.name]}
                 border="2px solid white"
+                color="white"
+                fontFamily="Mulish"
                 mt="23px"
                 h="85px"
                 onChange={inputValues}

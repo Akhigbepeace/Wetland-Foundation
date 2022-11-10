@@ -178,7 +178,6 @@ const ProjectDesc = () => {
                           <Progress
                             mt="13px"
                             colorScheme="green"
-                            // colorScheme="#2C4E2A"
                             size="lg"
                             value={60}
                             bg="#BDE3AB"
