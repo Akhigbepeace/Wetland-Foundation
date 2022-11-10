@@ -11,13 +11,40 @@ import React from "react";
 const Form = () => {
   const fields = ["Fullname", "Phone Number", "Email", "Subject"];
   return (
-    <Box pr="65px">
+    <Box
+      pr={{
+        xl: "65px",
+        "2xl": "65px",
+      }}
+      bg="#BDE3AB"
+      px={{
+        sm: "31px",
+        md: "41px",
+        lg: "51px",
+        xl: "0",
+        "2xl": "0",
+      }}
+      pb={{
+        sm: "66px",
+        md: "66px",
+        lg: "66px",
+        xl: "168px",
+        "2xl": "168px",
+      }}
+    >
       <Heading
         fontFamily="Manrope"
         fontSize="36px"
         fontWeight="700"
         color="#2C4E2A"
         mb="36px"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "block",
+          "2xl": "block",
+        }}
       >
         Send Us a Message
       </Heading>
@@ -37,10 +64,16 @@ const Form = () => {
               </FormLabel>
               <Input
                 placeholder={field}
-                w="600px"
+                w={{
+                  sm: "100%",
+                  md: "100%",
+                  lg: "600px",
+                  xl: "600px",
+                  "2xl": "600px",
+                }}
                 h="75px"
                 border="2px solid red"
-                borderColor="black"
+                borderColor="#2C4E2A"
                 mb="40px"
                 focusBorderColor="black"
                 _placeholder={{

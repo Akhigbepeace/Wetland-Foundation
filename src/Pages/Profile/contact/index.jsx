@@ -9,7 +9,13 @@ const index = () => {
       <Heading
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize="60px"
+        fontSize={{
+          sm: "30px",
+          md: "30px",
+          lg: "40px",
+          xl: "60px",
+          "2xl": "60px",
+        }}
         textAlign="center"
         color="#2C4E2A"
         pt="103px"
@@ -17,16 +23,18 @@ const index = () => {
         CONTACT US
       </Heading>
       <Flex
+        justifyContent="space-between"
+        display={{
+          lg: "flex",
+          xl: "flex",
+          "2xl": "flex",
+        }}
         w={{
-          sm: "300px",
-          md: "500px",
-          lg: "750px",
           xl: "1200px",
           "2xl": "1300px",
         }}
         mx="auto"
         mt="75px"
-        pb="168px"
       >
         <Form />
         <Directions />

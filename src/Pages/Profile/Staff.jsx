@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import image from "assets/image.png";
 
@@ -40,7 +40,13 @@ const Staff = () => {
       <Heading
         textAlign="center"
         fontFamily="Mulish"
-        fontSize="60px"
+        fontSize={{
+          sm: "30px",
+          md: "30px",
+          lg: "40px",
+          xl: "60px",
+          "2xl": "60px",
+        }}
         fontWeight="800"
         pt="86px"
         mb="26px"
@@ -49,7 +55,13 @@ const Staff = () => {
         PROJECT STAFF
       </Heading>
       <Grid
-        gridTemplateColumns="repeat(3, auto)"
+        gridTemplateColumns={{
+          sm: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
+          xl: "repeat(3, 1fr)",
+          "2xl": "repeat(3, 1fr)",
+        }}
         w={{
           sm: "300px",
           md: "500px",
@@ -63,17 +75,35 @@ const Staff = () => {
       >
         {staffs.map((staff, index) => {
           return (
-            <Box key={index}>
+            <Flex key={index} flexDirection="column" alignItems="center">
               <Image
                 src={staff.pic}
                 alt="staff"
-                w="417px"
-                h="314px"
+                w={{
+                  sm: "100%",
+                  md: "259px",
+                  lg: "359px",
+                  xl: "417px",
+                  "2xl": "417px",
+                }}
+                h={{
+                  sm: "141px",
+                  md: "241px",
+                  lg: "241px",
+                  xl: "314px",
+                  "2xl": "314px",
+                }}
                 objectFit="cover"
               />
               <Heading
                 fontFamily="Manrope"
-                fontSize="34px"
+                fontSize={{
+                  sm: "16px",
+                  md: "22px",
+                  lg: "28px",
+                  xl: "34px",
+                  "2xl": "34px",
+                }}
                 fontWeight="700"
                 textAlign="center"
                 mt="20px"
@@ -82,7 +112,13 @@ const Staff = () => {
               </Heading>
               <Text
                 fontFamily="Manrope"
-                fontSize="20px"
+                fontSize={{
+                  sm: "13px",
+                  md: "22px",
+                  lg: "28px",
+                  xl: "34px",
+                  "2xl": "34px",
+                }}
                 fontWeight="400"
                 color="#2C4E2A"
                 textAlign="center"
@@ -90,7 +126,7 @@ const Staff = () => {
               >
                 {staff.post}
               </Text>
-            </Box>
+            </Flex>
           );
         })}
       </Grid>
