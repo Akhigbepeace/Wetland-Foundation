@@ -79,6 +79,7 @@ const ReachOut = () => {
           "2xl": "block",
         }}
         color="#fff"
+        justifyContent="center"
         fontFamily="Mulish"
         fontWeight="300"
         fontSize={{

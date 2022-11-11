@@ -2,6 +2,7 @@ import { Box, Button, Flex, Image, Link } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate, useLocation, NavLink } from "react-router-dom";
 import Search from "component/Search";
+import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -28,17 +29,27 @@ const Navbar = () => {
     navigate("/", { replace: true });
   };
   return (
-    <Box
-      w={{
-        sm: "300px",
-        md: "500px",
-        lg: "750px",
-        xl: "1200px",
-        "2xl": "1300px",
-      }}
-      mx="auto"
-    >
-      <Flex my="30px" justifyContent="space-between" w="100%" zIndex="6">
+    <Box>
+      <Flex
+        w={{
+          sm: "300px",
+          md: "500px",
+          lg: "none",
+          xl: "1200px",
+          "2xl": "1300px",
+        }}
+        mx="auto"
+        my="30px"
+        justifyContent="space-between"
+        zIndex="6"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+      >
         <Image
           src="https://res.cloudinary.com/wavecrest1/image/upload/v1666349401/wetland/logo_yx26cs.png"
           w="110px"
@@ -94,6 +105,8 @@ const Navbar = () => {
           </Button>
         </Flex>
       </Flex>
+
+      <MobileNavbar />
     </Box>
   );
 };
