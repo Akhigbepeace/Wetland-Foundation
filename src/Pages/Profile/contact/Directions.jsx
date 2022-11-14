@@ -75,7 +75,7 @@ const Directions = () => {
           w={{
             sm: "100%",
             md: "100%",
-            lg: "569px",
+            lg: "100%",
             xl: "569px",
             "2xl": "569px",
           }}
@@ -98,7 +98,7 @@ const Directions = () => {
           w={{
             sm: "100%",
             md: "100%",
-            lg: "569px",
+            lg: "100%",
             xl: "569px",
             "2xl": "569px",
           }}
@@ -177,7 +177,12 @@ const Directions = () => {
         >
           DOWNLOADS
         </Heading>
-        <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="18px" mt="21px">
+        <Grid
+          gridTemplateColumns="repeat(3, 1fr)"
+          gridGap="18px"
+          mt="21px"
+          justifyContent="center"
+        >
           {donwloads.map((download, index) => {
             return (
               <Image

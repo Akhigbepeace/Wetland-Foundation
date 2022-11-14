@@ -15,6 +15,13 @@ const Index = () => {
           "2xl": "1300px",
         }}
         mx="auto"
+        flexDirection={{
+          sm: "column-reverse",
+          md: "column-reverse",
+          lg: "column-reverse",
+          xl: "row",
+          "2xl": "row",
+        }}
       >
         <ShowcaseContent />
         <Map />

@@ -28,8 +28,8 @@ const settings = {
 export default function Carousel() {
   const [slider, setSlider] = React.useState(null);
 
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "10px" });
+  const top = useBreakpointValue({ base: "90%", md: "50%", sm: "40%" });
+  const side = useBreakpointValue({ base: "30%", md: "10px", sm: "4%" });
 
   const cards = [
     {
@@ -105,9 +105,23 @@ export default function Carousel() {
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((data, index) => {
           return (
-            <Box key={index} h="500px" bg="#2C4E2A">
+            <Box
+              key={index}
+              h={{
+                xl: "500px",
+                "2xl": "500px",
+              }}
+              bg="#2C4E2A"
+            >
               <Flex
-                flexDirection="row"
+                flexDirection={{
+                  sm: "column-reverse",
+                  md: "column-reverse",
+                  lg: "column-reverse",
+                  xl: "row",
+                  "2xl": "row",
+                }}
+                mr="30px"
                 justifyContent="space-between"
                 h="100%"
                 m="auto"
@@ -115,7 +129,27 @@ export default function Carousel() {
                   "2xl": "1300px",
                 }}
               >
-                <Box m="auto" maxW="600px">
+                <Box
+                  m="auto"
+                  maxW={{
+                    xl: "600px",
+                    "2xl": "600px",
+                  }}
+                  textAlign={{
+                    sm: "center",
+                    md: "center",
+                    lg: "center",
+                    xl: "left",
+                    "2xl": "left",
+                  }}
+                  p={{
+                    sm: "30px 20px",
+                    md: "30px 20px",
+                    lg: "30px 20px",
+                    xl: "0",
+                    "2xl": "0",
+                  }}
+                >
                   <Heading
                     fontFamily="Mulish"
                     fontWeight="800"
@@ -132,6 +166,13 @@ export default function Carousel() {
                     lineHeight="40px"
                     mb="50px"
                     color="#FFF"
+                    textAlign={{
+                      sm: "center",
+                      md: "center",
+                      lg: "center",
+                      xl: "left",
+                      "2xl": "left",
+                    }}
                   >
                     {data.text}
                   </Text>

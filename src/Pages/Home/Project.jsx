@@ -65,7 +65,19 @@ const Project = () => {
     },
   ];
   return (
-    <Flex gridGap="20px" w="1300px" mx="auto" mb="20px" overflowX="scroll">
+    <Flex
+      gridGap="20px"
+      w={{
+        sm: "300px",
+        md: "500px",
+        lg: "750px",
+        xl: "1200px",
+        "2xl": "1300px",
+      }}
+      mx="auto"
+      mb="20px"
+      overflowX="scroll"
+    >
       {projects.map((project, index) => {
         return (
           <Flex
@@ -94,7 +106,18 @@ const Project = () => {
             >
               {project.title}
             </Heading>
-            <Text textAlign="center">{project.text}</Text>
+            <Text
+              display={{
+                sm: "none",
+                md: "none",
+                lg: "none",
+                xl: "block",
+                "2xl": "block",
+              }}
+              textAlign="center"
+            >
+              {project.text}
+            </Text>
           </Flex>
         );
       })}
