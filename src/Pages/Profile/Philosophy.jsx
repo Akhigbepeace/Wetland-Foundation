@@ -1,5 +1,5 @@
 import { Box, Grid, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
-import React from "react";
+import React, { Fragment } from "react";
 
 const Philosophy = () => {
   const ourValues = [
@@ -20,8 +20,10 @@ const Philosophy = () => {
   return (
     <Box bg="#BDE3AB">
       <Grid
-        gridTemplateColumns="repeat(3, 1fr)"
-        mt="117px"
+        gridTemplateColumns={{
+          xl: "repeat(3, 1fr)",
+          "2xl": "repeat(3, 1fr)",
+        }}
         gridGap="94px"
         py="120px"
         w={{
@@ -37,30 +39,68 @@ const Philosophy = () => {
           const coreValues = Array.isArray(ourValue.text)
             ? ourValue.text.map((coreValues, index) => (
                 <UnorderedList key={index}>
-                  <ListItem textAlign="initial">{coreValues}</ListItem>
+                  <ListItem
+                    textAlign={{
+                      sm: "center",
+                      md: "center",
+                      lg: "center",
+                      xl: "left",
+                      "2xl": "left",
+                    }}
+                    listStyleType={{
+                      sm: "none",
+                      md: "none",
+                      lg: "none",
+                      xl: "disc",
+                      "2xl": "disc",
+                    }}
+                  >
+                    {coreValues}
+                  </ListItem>
                 </UnorderedList>
               ))
             : ourValue.text;
           return (
-            <Box key={index}>
-              <Heading
-                textAlign="center"
-                fontFamily="Visual Hollow Script"
-                fontSize="70px"
-                fontWeight="400"
-                color="#2C4E2A"
-              >
-                {ourValue.name}
-              </Heading>
-              <Box
-                textAlign="center"
-                fontFamily="Manrope"
-                fontSize="18px"
-                fontWeight="400"
-              >
-                {coreValues}
+            <Fragment>
+              <Box key={index}>
+                <Heading
+                  textAlign="center"
+                  fontFamily="Visual Hollow Script"
+                  fontSize={{
+                    sm: "50px",
+                    md: "50px",
+                    lg: "40px",
+                    xl: "70px",
+                    "2xl": "80px",
+                  }}
+                  fontWeight="400"
+                  color="#2C4E2A"
+                >
+                  {ourValue.name}
+                </Heading>
+                <Box
+                  textAlign="center"
+                  fontFamily="Manrope"
+                  fontSize="18px"
+                  fontWeight="400"
+                >
+                  {coreValues}
+                </Box>
               </Box>
-            </Box>
+              <Box
+                w="80%"
+                h="1px"
+                bg="#000"
+                mx="auto"
+                display={{
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "none",
+                  "2xl": "none",
+                }}
+              />
+            </Fragment>
           );
         })}
       </Grid>

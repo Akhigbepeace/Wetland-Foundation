@@ -55,11 +55,22 @@ const Newsletter = () => {
   ];
 
   return (
-    <Box w="416px">
+    <Box
+      w={{
+        xl: "416px",
+        "2xl": "416px",
+      }}
+    >
       <Heading
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize="48px"
+        fontSize={{
+          sm: "40px",
+          md: "40px",
+          lg: "45px",
+          xl: "48px",
+          "2xl": "48px",
+        }}
         color="white"
         lineHeight="54px"
         mb="28px"
@@ -112,6 +123,21 @@ const Newsletter = () => {
           Sign Up
         </Button>
       </form>
+
+      <Box
+        w="100%"
+        h="2px"
+        bg="#FFF"
+        mx="auto"
+        my="36px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      />
     </Box>
   );
 };

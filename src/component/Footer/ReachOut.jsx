@@ -20,13 +20,31 @@ const ReachOut = () => {
     },
   ];
   return (
-    <Box w="416px">
+    <Box
+      w={{
+        xl: "416px",
+        "2xl": "416px",
+      }}
+    >
       <Heading
         color="#fff"
         fontFamily="Mulish"
         fontWeight="800"
         fontSize="48px"
-        mb="36px"
+        mb={{
+          sm: "10px",
+          md: "18px",
+          lg: "28px",
+          xl: "36px",
+          "2xl": "36px",
+        }}
+        textAlign={{
+          sm: "center",
+          md: "center",
+          lg: "center",
+          xl: "left",
+          "2xl": "left",
+        }}
       >
         Reach Out
       </Heading>
@@ -34,24 +52,84 @@ const ReachOut = () => {
         color="#fff"
         fontFamily="Mulish"
         fontWeight="300"
-        fontSize="23px"
-        lineHeight="36px"
+        fontSize={{
+          sm: "18px",
+          md: "18px",
+          lg: "18px",
+          xl: "20px",
+          "2xl": "23px",
+        }}
+        textAlign={{
+          sm: "center",
+          md: "center",
+          lg: "center",
+          xl: "left",
+          "2xl": "left",
+        }}
       >
         2, Ahmed Onibudu Street, Victoria Island, Lagos.
       </Text>
+
       <Box
+        display={{
+          sm: "flex",
+          md: "flex",
+          lg: "flex",
+          xl: "block",
+          "2xl": "block",
+        }}
         color="#fff"
         fontFamily="Mulish"
         fontWeight="300"
-        fontSize="23px"
+        fontSize={{
+          sm: "16px",
+          md: "16px",
+          lg: "16px",
+          xl: "20px",
+          "2xl": "23px",
+        }}
         lineHeight="36px"
-        mt="40px"
+        mt={{
+          sm: "10px",
+          md: "18px",
+          lg: "28px",
+          xl: "36px",
+          "2xl": "36px",
+        }}
       >
         <Text>+234 000 000 0000 </Text>
+
+        <Text
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+          px="3px"
+        >
+          |
+        </Text>
         <Text> team@wetland.ng</Text>
       </Box>
 
-      <Flex mt="90px">
+      <Flex
+        mt={{
+          sm: "24px",
+          md: "24px",
+          lg: "24px",
+          xl: "90px",
+          "2xl": "90px",
+        }}
+        justifyContent={{
+          sm: "center",
+          md: "center",
+          lg: "center",
+          xl: "left",
+          "2xl": "left",
+        }}
+      >
         {socialMedia.map((media, index) => {
           return (
             <Link
@@ -61,13 +139,34 @@ const ReachOut = () => {
               bg="#FFF"
               borderRadius="100%"
               p="10px 10px 5px 10px"
-              mr="51px"
+              mr={{
+                sm: "13px",
+                md: "13px",
+                lg: "13px",
+                xl: "51px",
+                "2xl": "51px",
+              }}
             >
               <Icon as={media.icon} w="20px" h="20px" color="#2C4E2A" />
             </Link>
           );
         })}
       </Flex>
+
+      <Box
+        w="100%"
+        h="2px"
+        bg="#FFF"
+        mx="auto"
+        my="36px"
+        display={{
+          sm: "block",
+          md: "block",
+          lg: "block",
+          xl: "none",
+          "2xl": "none",
+        }}
+      />
     </Box>
   );
 };

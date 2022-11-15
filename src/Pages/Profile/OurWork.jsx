@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 
 const OurWork = () => {
@@ -29,7 +29,13 @@ const OurWork = () => {
       <Heading
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize="60px"
+        fontSize={{
+          sm: "30px",
+          md: "30px",
+          lg: "40px",
+          xl: "60px",
+          "2xl": "60px",
+        }}
         textAlign="center"
         color="#2C4E2A"
         mt="100px"
@@ -37,7 +43,7 @@ const OurWork = () => {
         WHAT WE DO
       </Heading>
 
-      <Flex
+      <Grid
         mt="40px"
         mb="100px"
         w={{
@@ -48,14 +54,37 @@ const OurWork = () => {
           "2xl": "1300px",
         }}
         mx="auto"
+        gridTemplateColumns={{
+          md: "1fr 1fr",
+          lg: "1fr 1fr",
+          xl: "repeat(4, 1fr)",
+          "2xl": "repeat(4, 1fr)",
+        }}
       >
         {whatWeDo.map((item, index) => {
           return (
-            <Flex key={index} flexDirection="column" alignItems="center">
+            <Flex
+              key={index}
+              flexDirection="column"
+              alignItems="center"
+              mb={{
+                sm: "25px",
+                md: "25px",
+                lg: "30px",
+                xl: "0",
+                "2xl": "0",
+              }}
+            >
               <Image src={item.image} alt="works" w="80px" h="80px" />
               <Heading
                 fontFamily="Manrope"
-                fontSize="34px"
+                fontSize={{
+                  sm: "25px",
+                  md: "25px",
+                  lg: "30px",
+                  xl: "34px",
+                  "2xl": "34px",
+                }}
                 fontWeight="600"
                 color="#2C4E2A"
                 textAlign="center"
@@ -66,7 +95,7 @@ const OurWork = () => {
             </Flex>
           );
         })}
-      </Flex>
+      </Grid>
     </Box>
   );
 };

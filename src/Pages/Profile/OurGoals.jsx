@@ -15,7 +15,13 @@ const OurGoals = () => {
         color="#FFF"
         textAlign="center"
         fontFamily="Mulish"
-        fontSize="60px"
+        fontSize={{
+          sm: "30px",
+          md: "30px",
+          lg: "40px",
+          xl: "60px",
+          "2xl": "60px",
+        }}
         fontWeight="800"
         pt="86px"
       >
@@ -30,7 +36,10 @@ const OurGoals = () => {
           "2xl": "1300px",
         }}
         mx="auto"
-        gridTemplateColumns="repeat(3, 1fr)"
+        gridTemplateColumns={{
+          xl: "repeat(3, 1fr)",
+          "2xl": "repeat(3, 1fr)",
+        }}
         mt="68px"
         gridGap="94px"
         pb="104px"
