@@ -30,14 +30,101 @@ const ShowcaseContent = () => {
     },
   ];
 
-  const partners = [ikota, womensboard, ecs, pau];
+  const partners = [
+    {
+      img: ikota,
+      width: {
+        sm: "68px",
+        md: "68px",
+        lg: "88px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "24px",
+        md: "24px",
+        lg: "34px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: womensboard,
+      width: {
+        sm: "56px",
+        md: "68px",
+        lg: "88px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "40px",
+        md: "24px",
+        lg: "34px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: ecs,
+      width: {
+        sm: "74px",
+        md: "68px",
+        lg: "88px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "33px",
+        md: "24px",
+        lg: "34px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: pau,
+      width: {
+        sm: "60px",
+        md: "60px",
+        lg: "70px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "25px",
+        md: "25px",
+        lg: "35px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+  ];
   return (
-    <Flex flexDirection="column">
-      <Box w="50%">
+    <Flex>
+      <Box
+        w={{
+          xl: "50%",
+          "2xl": "50%",
+        }}
+        textAlign={{
+          sm: "center",
+          md: "center",
+          lg: "center",
+          xl: "left",
+          "2xl": "left",
+        }}
+      >
         <Heading
           fontFamily="Mulish"
           fontWeight="800"
-          fontSize="40px"
+          fontSize={{
+            sm: "25px",
+            md: "25px",
+            lg: "25px",
+            xl: "40px",
+            "2xl": "40px",
+          }}
           color="#2C4E2A"
         >
           Wetland Cultural and Education Foundation
@@ -45,9 +132,20 @@ const ShowcaseContent = () => {
         <Text
           fontFamily="Manrope"
           fontWeight="400"
-          fontSize="30px"
-          mt="5px"
-          lineHeight="40px"
+          fontSize={{
+            sm: "17px",
+            md: "17px",
+            lg: "17px",
+            xl: "30px",
+            "2xl": "30px",
+          }}
+          mt={{
+            sm: "10px",
+            md: "10px",
+            lg: "10px",
+            xl: "5px",
+            "2xl": "5px",
+          }}
         >
           We foster partnerships,implement and manage social innovative projects
           focused on human
@@ -85,6 +183,7 @@ const ShowcaseContent = () => {
           borderBottom="1px solid #C9CECA"
           py="10px"
           justifyContent="space-between"
+          alignItems="center"
           mb="84px"
           mt="50px"
         >
@@ -92,10 +191,22 @@ const ShowcaseContent = () => {
             return (
               <Image
                 key={index}
-                src={partner}
+                src={partner.img}
                 alt="partner"
-                w="120px"
-                h="50px"
+                w={{
+                  sm: partner.width.sm,
+                  md: partner.width.md,
+                  lg: partner.width.lg,
+                  xl: partner.width.xl,
+                  "2xl": partner.width.xL,
+                }}
+                h={{
+                  sm: partner.height.sm,
+                  md: partner.height.md,
+                  lg: partner.height.lg,
+                  xl: partner.height.xl,
+                  "2xl": partner.height.xL,
+                }}
               />
             );
           })}

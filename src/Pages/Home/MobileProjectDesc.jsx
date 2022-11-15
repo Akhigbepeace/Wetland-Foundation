@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
   Heading,
   Image,
   Progress,
@@ -12,9 +11,7 @@ import React from "react";
 import { PROJECTS } from "data/project";
 import { useNavigate } from "react-router-dom";
 
-const ProjectDesc = () => {
-  const navigate = useNavigate();
-
+const MobileProjectDesc = () => {
   const donates = [
     {
       bg: "#2C4E2A",
@@ -37,23 +34,23 @@ const ProjectDesc = () => {
     },
   ];
 
+  const navigate = useNavigate();
   return (
     <Box
+      display={{
+        sm: "block",
+        md: "block",
+        lg: "block",
+        xl: "none",
+        "2xl": "none",
+      }}
       w={{
         sm: "300px",
         md: "500px",
         lg: "750px",
-        xl: "1200px",
-        "2xl": "1300px",
-      }}
-      display={{
-        sm: "none",
-        md: "none",
-        lg: "none",
-        xl: "block",
-        "2xl": "block",
       }}
       mx="auto"
+      flexDirection="column"
     >
       {PROJECTS.map((item, index) => {
         return (
@@ -74,7 +71,7 @@ const ProjectDesc = () => {
                     <Image src={item.icon} w="32px" h="32px" m="auto" />
                   </Box>
 
-                  <Heading fontFamily="Mulish" fontWeight="800" fontSize="30px">
+                  <Heading fontFamily="Mulish" fontWeight="800" fontSize="20px">
                     {item.title}
                   </Heading>
                 </Flex>
@@ -82,37 +79,36 @@ const ProjectDesc = () => {
                 <Text
                   fontFamily="Manrope"
                   fontWeight="400"
-                  fontSize="30px"
+                  fontSize="16px"
                   mt="12px"
                 >{`Here are some projects regarding ${item.title}`}</Text>
               </Box>
             </Flex>
 
             <Flex>
-              <Box w="2px" ml="10px" bg="rgba(201, 206, 202, 0.59)" />
-
-              <Grid
-                gridTemplateColumns="repeat(3, 1fr)"
-                gridGap="30px"
-                ml="40px"
+              <Box w="2px" ml="7px" mr="30px" bg="rgba(201, 206, 202, 0.59)" />
+              <Flex
+                w={{
+                  sm: "300px",
+                  md: "500px",
+                  lg: "750px",
+                }}
+                mx="auto"
+                overflowX="scroll"
               >
                 {item.projectData.map((data, index) => {
                   return (
-                    <Box
-                      key={index}
-                      maxW="435px"
-                      border="2px solid rgba(201, 206, 202, 0.59)"
-                    >
+                    <Box key={index} mr="7px" w="269px">
                       <Image
                         src={data.pic}
                         alt="project-image"
                         w="100%"
-                        h="314px"
+                        h="234px"
                         objectFit="cover"
                         borderRadius="2px"
                       />
 
-                      <Box p="27px 36px 38px 36px">
+                      <Box p="20px 10px">
                         <Flex>
                           <Image
                             src={data.logo}
@@ -124,8 +120,7 @@ const ProjectDesc = () => {
                           <Heading
                             fontFamily="Mulish"
                             fontWeight="700"
-                            fontSize="26px"
-                            lineHeight="30px"
+                            fontSize="15px"
                           >
                             {data.name}
                           </Heading>
@@ -161,7 +156,7 @@ const ProjectDesc = () => {
                             By:
                           </Heading>
 
-                          <Box w="130px" ml="20px">
+                          <Box w="100px" ml="20px">
                             <Image
                               src={data.by}
                               alt="by"
@@ -199,11 +194,11 @@ const ProjectDesc = () => {
                                 key={index}
                                 bg={donate.bg}
                                 color={donate.color}
-                                w="140px"
-                                h="47px"
+                                w="110px"
+                                h="38px"
                                 fontFamily="Poppins"
                                 fontWeight="400"
-                                fontSize="18px"
+                                fontSize="15px"
                                 border="2px solid #2C4E2A"
                                 borderRadius="2px"
                                 transition="all ease 0.5s"
@@ -222,7 +217,7 @@ const ProjectDesc = () => {
                     </Box>
                   );
                 })}
-              </Grid>
+              </Flex>
             </Flex>
           </Box>
         );
@@ -231,4 +226,4 @@ const ProjectDesc = () => {
   );
 };
 
-export default ProjectDesc;
+export default MobileProjectDesc;

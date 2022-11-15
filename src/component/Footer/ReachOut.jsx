@@ -33,8 +33,8 @@ const ReachOut = () => {
         fontSize="48px"
         mb={{
           sm: "10px",
-          md: "18px",
-          lg: "28px",
+          md: "10px",
+          lg: "10px",
           xl: "36px",
           "2xl": "36px",
         }}
@@ -92,8 +92,8 @@ const ReachOut = () => {
         lineHeight="36px"
         mt={{
           sm: "10px",
-          md: "18px",
-          lg: "28px",
+          md: "10px",
+          lg: "10px",
           xl: "36px",
           "2xl": "36px",
         }}

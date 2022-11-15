@@ -1,10 +1,8 @@
-import { Box } from '@chakra-ui/react'
-import React from 'react'
+import { Box } from "@chakra-ui/react";
+import React from "react";
 
 const Map = () => {
-  return (
-    <Box>Map</Box>
-  )
-}
+  return <Box>Map</Box>;
+};
 
-export default Map
+export default Map;
