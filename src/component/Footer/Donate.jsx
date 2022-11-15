@@ -25,7 +25,13 @@ const Donate = () => {
       <Heading
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize="48px"
+        fontSize={{
+          sm: "30px",
+          md: "35px",
+          lg: "45px",
+          xl: "48px",
+          "2xl": "48px",
+        }}
         color="white"
         textAlign={{
           sm: "center",

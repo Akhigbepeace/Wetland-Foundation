@@ -74,14 +74,20 @@ const Newsletter = () => {
         fontFamily="Mulish"
         fontWeight="800"
         fontSize={{
-          sm: "40px",
-          md: "40px",
+          sm: "30px",
+          md: "35px",
           lg: "45px",
           xl: "48px",
           "2xl": "48px",
         }}
+        textAlign={{
+          sm: "center",
+          md: "center",
+          lg: "center",
+          xl: "left",
+          "2xl": "left",
+        }}
         color="white"
-        lineHeight="54px"
         mb="28px"
       >
         Sign Up for Our Newsletter
