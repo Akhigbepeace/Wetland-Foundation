@@ -4,6 +4,15 @@ import React from "react";
 const Donate = () => {
   return (
     <Box
+      display={{
+        sm: "flex",
+        md: "flex",
+        lg: "flex",
+        xl: "block",
+        "2xl": "block",
+      }}
+      flexDirection="column"
+      alignItems="center"
       w={{
         xl: "416px",
         "2xl": "416px",

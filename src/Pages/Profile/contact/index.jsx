@@ -25,7 +25,6 @@ const index = () => {
       <Flex
         justifyContent="space-between"
         display={{
-          lg: "flex",
           xl: "flex",
           "2xl": "flex",
         }}
