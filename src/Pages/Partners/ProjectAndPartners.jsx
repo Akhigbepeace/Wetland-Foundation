@@ -10,6 +10,7 @@ import {
 import React, { Fragment, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PROJECT_NAMES, PROJECTS_TO_NAME_OBJ } from "data/partners";
+import MobilePartnerSelector from "./MobilePartnerSelector";
 
 const ProjectAndPartners = () => {
   const firstProjectName = PROJECT_NAMES[0];
@@ -74,6 +75,13 @@ const ProjectAndPartners = () => {
           "2xl": "1300px",
         }}
         mx="auto"
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "block",
+          "2xl": "block",
+        }}
       >
         <Flex alignItems="center" mb="30px">
           <Text
@@ -152,10 +160,61 @@ const ProjectAndPartners = () => {
         </Flex>
       </Box>
 
-      <Box mt="90px">
+      <Box
+        w={{
+          sm: "300px",
+          md: "500px",
+          lg: "750px",
+          xl: "1200px",
+          "2xl": "1300px",
+        }}
+        mx="auto"
+      >
+        <MobilePartnerSelector />
+      </Box>
+
+      <Box
+        mt="90px"
+        display={{
+          sm: "flex",
+          md: "flex",
+          lg: "flex",
+          xl: "block",
+          "2xl": "block",
+        }}
+        flexDirection="column"
+        alignItems="center"
+        textAlign={{
+          sm: "center",
+          md: "center",
+          lg: "center",
+          xl: "left",
+          "2xl": "left",
+        }}
+      >
+        <Image
+          src={currentPartner.logo}
+          w="138px"
+          h="48px"
+          mb="20px"
+          display={{
+            sm: "block",
+            md: "block",
+            lg: "block",
+            xl: "none",
+            "2xl": "none",
+          }}
+        />
+
         <Box bg={currentPartner.showcaseBg}>
           <Flex
-            flexDirection="row"
+            flexDirection={{
+              sm: "column-reverse",
+              md: "column-reverse",
+              lg: "column-reverse",
+              xl: "row",
+              "2xl": "row",
+            }}
             justifyContent="space-between"
             m="auto"
             w={{
@@ -163,11 +222,28 @@ const ProjectAndPartners = () => {
             }}
           >
             <Box m="auto" py="30px">
-              <Image src={currentPartner.logo} w="226px" h="79px" />
+              <Image
+                src={currentPartner.logo}
+                w="226px"
+                h="79px"
+                display={{
+                  sm: "none",
+                  md: "none",
+                  lg: "none",
+                  xl: "block",
+                  "2xl": "block",
+                }}
+              />
               <Heading
                 fontFamily="Mulish"
                 fontWeight="800"
-                fontSize="45px"
+                fontSize={{
+                  sm: "22px",
+                  md: "22px",
+                  lg: "22px",
+                  xl: "45px",
+                  "2xl": "45px",
+                }}
                 color="#2E3493"
                 mb="24px"
                 mt="35px"
@@ -176,11 +252,17 @@ const ProjectAndPartners = () => {
               >
                 {currentPartner.partnerName}
               </Heading>
+
               <Text
                 fontFamily="Manrope"
                 fontWeight="400"
-                fontSize="25px"
-                lineHeight="35px"
+                fontSize={{
+                  sm: "17px",
+                  md: "17px",
+                  lg: "17px",
+                  xl: "25px",
+                  "2xl": "25px",
+                }}
                 mb="50px"
               >
                 {currentPartner.projectDesc}
@@ -220,14 +302,55 @@ const ProjectAndPartners = () => {
           }}
           m="80px auto"
         >
+          <Heading
+            fontFamily="Mulish"
+            fontWeight="800"
+            fontSize={{
+              sm: "22px",
+              md: "22px",
+              lg: "22px",
+              xl: "45px",
+              "2xl": "45px",
+            }}
+            color="#2C4E2A"
+            mb="24px"
+            mt="35px"
+            textTransform="uppercase"
+            maxW="700px"
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+          >
+            {`PROJECTS HANDLED BY ${currentPartner.partnerName}`}
+          </Heading>
           {currentPartner.projectData?.map((data, index) => {
             return (
-              <Flex key={index} mb="90px">
+              <Flex
+                key={index}
+                mb="90px"
+                flexDirection={{
+                  sm: "column",
+                  md: "column",
+                  lg: "column",
+                  xl: "row",
+                  "2xl": "row",
+                }}
+              >
                 <Image
                   src={data.pic}
                   alt="project-image"
                   w="100%"
-                  h="388px"
+                  h={{
+                    sm: "234px",
+                    md: "234px",
+                    lg: "234px",
+                    xl: "388px",
+                    "2xl": "388px",
+                  }}
                   objectFit="cover"
                   mr="40px"
                 />
@@ -244,8 +367,13 @@ const ProjectAndPartners = () => {
                       <Heading
                         fontFamily="Mulish"
                         fontWeight="700"
-                        fontSize="26px"
-                        lineHeight="30px"
+                        fontSize={{
+                          sm: "17px",
+                          md: "17px",
+                          lg: "17px",
+                          xl: "26px",
+                          "2xl": "26px",
+                        }}
                       >
                         {data.name}
                       </Heading>
@@ -254,9 +382,14 @@ const ProjectAndPartners = () => {
                     <Text
                       my="18px"
                       fontFamily="Manrope"
-                      fontSize="20px"
+                      fontSize={{
+                        sm: "17px",
+                        md: "17px",
+                        lg: "17px",
+                        xl: "20px",
+                        "2xl": "20px",
+                      }}
                       fontWeight="400"
-                      lineHeight="30px"
                       color="rgba(0, 0, 0, 0.84)"
                     >
                       {data.desc}
@@ -278,6 +411,13 @@ const ProjectAndPartners = () => {
                         fontWeight="700"
                         fontSize="18px"
                         color="#2C4E2A"
+                        display={{
+                          sm: "none",
+                          md: "none",
+                          lg: "none",
+                          xl: "block",
+                          "2xl": "block",
+                        }}
                       >
                         Project estimation
                       </Heading>

@@ -30,7 +30,13 @@ const ReachOut = () => {
         color="#fff"
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize="48px"
+        fontSize={{
+          sm: "30px",
+          md: "35px",
+          lg: "45px",
+          xl: "48px",
+          "2xl": "48px",
+        }}
         mb={{
           sm: "10px",
           md: "10px",
