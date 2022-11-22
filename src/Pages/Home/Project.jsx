@@ -77,6 +77,20 @@ const Project = () => {
       mx="auto"
       mb="20px"
       overflowX="scroll"
+      css={{
+        "::-webkit-scrollbar": {
+          width: "2px",
+        },
+        "::-webkit-scrollbar-track": {
+          background: "#f1f1f1",
+        },
+        "::-webkit-scrollbar-thumb": {
+          background: "#888",
+        },
+        "::-webkit-scrollbar-thumb:hover": {
+          background: "#555",
+        },
+      }}
     >
       {projects.map((project, index) => {
         return (

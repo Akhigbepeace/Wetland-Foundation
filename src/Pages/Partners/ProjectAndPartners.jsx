@@ -170,7 +170,16 @@ const ProjectAndPartners = () => {
         }}
         mx="auto"
       >
-        <MobilePartnerSelector />
+        <MobilePartnerSelector
+          setCurrentPartnerNames={setCurrentPartnerNames}
+          currentPartnerNames={currentPartnerNames}
+          setPartnerMap={setPartnerMap}
+          partnerMap={partnerMap}
+          currentPartner={currentPartner}
+          setCurrentPartner={setCurrentPartner}
+          setCurrentProject={setCurrentProject}
+          setProjectDetails={setProjectDetails}
+        />
       </Box>
 
       <Box
@@ -449,9 +458,7 @@ const ProjectAndPartners = () => {
                           borderRadius="2px"
                           transition="all ease 0.5s"
                           _hover={{
-                            bg: donate.hoverBg,
-                            color: donate.hoverColor,
-                            border: `2px solid ${donate.hoverBorder}`,
+                            opacity: 0.9,
                           }}
                         >
                           {donate.name}

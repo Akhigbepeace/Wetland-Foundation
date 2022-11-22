@@ -33,7 +33,7 @@ const Search = () => {
       </form>
 
       <Box
-        bg={showSearchBar ? "#BDE3AB" : "#FFF"}
+        bg={showSearchBar ? "#BDE3AB" : "transparent"}
         borderRightRadius="2px"
         pr="33px"
         py="17px"

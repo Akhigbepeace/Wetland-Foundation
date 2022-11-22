@@ -22,6 +22,7 @@ const Index = () => {
           xl: "row",
           "2xl": "row",
         }}
+        alignItems="center"
       >
         <ShowcaseContent />
         <Map />
