@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
   Heading,
   Image,
   Progress,
@@ -17,17 +16,19 @@ const ProjectDesc = () => {
 
   const donates = [
     {
+      // rightMargin: "0",
       bg: "#2C4E2A",
       name: "Donate",
       color: "white",
       hoverBg: "#142413",
       hoverBorder: "#142413",
-      hoverColor: "#BDE3AB",
+      hoverColor: "#EBEDEF",
       to: () => {
         navigate("", { replace: true });
       },
     },
     {
+      // rightMargin: "25px",
       bg: "#FFF",
       name: "Share Project",
       hoverBg: "#EBEDEF",
@@ -91,18 +92,15 @@ const ProjectDesc = () => {
             <Flex>
               <Box w="2px" ml="10px" bg="rgba(201, 206, 202, 0.59)" />
 
-              <Grid
+              <Flex
                 gridTemplateColumns="repeat(3, 1fr)"
                 gridGap="30px"
                 ml="40px"
+                overflowX="scroll"
               >
                 {item.projectData.map((data, index) => {
                   return (
-                    <Box
-                      key={index}
-                      maxW="435px"
-                      border="2px solid rgba(201, 206, 202, 0.59)"
-                    >
+                    <Box key={index} boxShadow="0px 10px 20px rgba(0, 0, 0, 0.25">
                       <Image
                         src={data.pic}
                         alt="project-image"
@@ -201,6 +199,7 @@ const ProjectDesc = () => {
                                 color={donate.color}
                                 w="140px"
                                 h="47px"
+                                mr="25px"
                                 fontFamily="Poppins"
                                 fontWeight="400"
                                 fontSize="18px"
@@ -222,7 +221,7 @@ const ProjectDesc = () => {
                     </Box>
                   );
                 })}
-              </Grid>
+              </Flex>
             </Flex>
           </Box>
         );

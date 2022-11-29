@@ -2,18 +2,22 @@ import React from "react";
 import ReachOut from "./ReachOut";
 import Donate from "./Donate";
 import Newsletter from "./Newsletter";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Grid, Text } from "@chakra-ui/react";
 
 const index = () => {
   return (
     <Box bg="#2C4E2A">
-      <Box
+      <Grid
         display={{
           sm: "block",
           md: "block",
           lg: "block",
-          xl: "flex",
-          "2xl": "flex",
+          xl: "grid",
+          "2xl": "grid",
+        }}
+        gridTemplateColumns={{
+          xl: "repeat(3, auto)",
+          "2xl": "repeat(3, auto)",
         }}
         w={{
           sm: "300px",
@@ -29,7 +33,7 @@ const index = () => {
         <ReachOut />
         <Donate />
         <Newsletter />
-      </Box>
+      </Grid>
 
       <Box
         w="80%"

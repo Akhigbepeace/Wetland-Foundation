@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ikota from "assets/ikota.png";
@@ -99,6 +99,108 @@ const ShowcaseContent = () => {
         xL: "50px",
       },
     },
+    {
+      img: ecs,
+      width: {
+        sm: "74px",
+        md: "68px",
+        lg: "88px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "33px",
+        md: "24px",
+        lg: "34px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: pau,
+      width: {
+        sm: "60px",
+        md: "60px",
+        lg: "70px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "25px",
+        md: "25px",
+        lg: "35px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: ecs,
+      width: {
+        sm: "74px",
+        md: "68px",
+        lg: "88px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "33px",
+        md: "24px",
+        lg: "34px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: pau,
+      width: {
+        sm: "60px",
+        md: "60px",
+        lg: "70px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "25px",
+        md: "25px",
+        lg: "35px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: ecs,
+      width: {
+        sm: "74px",
+        md: "68px",
+        lg: "88px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "33px",
+        md: "24px",
+        lg: "34px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
+    {
+      img: pau,
+      width: {
+        sm: "60px",
+        md: "60px",
+        lg: "70px",
+        xl: "120px",
+        xL: "120px",
+      },
+      height: {
+        sm: "25px",
+        md: "25px",
+        lg: "35px",
+        xl: "50px",
+        xL: "50px",
+      },
+    },
   ];
   return (
     <Flex>
@@ -150,15 +252,43 @@ const ShowcaseContent = () => {
           We foster partnerships,implement and manage social innovative projects
           focused on human
         </Text>
-        <Flex mt="20px" justifyContent="space-between">
+        <Flex
+          mt="20px"
+          justifyContent={{
+            sm: "center",
+            md: "center",
+            lg: "center",
+            xl: "left",
+            "2xl": "left",
+          }}
+        >
           {donates.map((donate, index) => {
             return (
               <Button
                 key={index}
                 bg={donate.bg}
                 color={donate.color}
-                w="140px"
-                h="47px"
+                w={{
+                  sm: "110px",
+                  md: "110px",
+                  lg: "125px",
+                  xl: "140px",
+                  "2xl": "140px",
+                }}
+                h={{
+                  sm: "38px",
+                  md: "38px",
+                  lg: "42px",
+                  xl: "47px",
+                  "2xl": "47px",
+                }}
+                mr={{
+                  sm: "25px",
+                  md: "25px",
+                  lg: "25px",
+                  xl: "50px",
+                  "2xl": "50px",
+                }}
                 fontFamily="Poppins"
                 fontWeight="400"
                 fontSize="18px"
@@ -186,6 +316,7 @@ const ShowcaseContent = () => {
           alignItems="center"
           mb="84px"
           mt="50px"
+          overflowX="scroll"
         >
           {partners.map((partner, index) => {
             return (

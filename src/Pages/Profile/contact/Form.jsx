@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Flex,
   FormLabel,
   Heading,
   Input,
@@ -11,7 +12,9 @@ import React from "react";
 const Form = () => {
   const fields = ["Fullname", "Phone Number", "Email", "Subject"];
   return (
-    <Box
+    <Flex
+      flexDirection="column"
+      justifyContent="space-between"
       pr={{
         xl: "65px",
         "2xl": "65px",
@@ -116,6 +119,7 @@ const Form = () => {
           }}
         />
       </form>
+
       <Button
         bg="#2C4E2A"
         w="207px"
@@ -129,7 +133,7 @@ const Form = () => {
       >
         Send
       </Button>
-    </Box>
+    </Flex>
   );
 };
 

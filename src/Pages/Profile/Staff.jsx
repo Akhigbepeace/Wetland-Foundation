@@ -113,11 +113,11 @@ const Staff = () => {
               <Text
                 fontFamily="Manrope"
                 fontSize={{
-                  sm: "13px",
-                  md: "22px",
-                  lg: "28px",
-                  xl: "34px",
-                  "2xl": "34px",
+                  sm: "15px",
+                  md: "15px",
+                  lg: "15px",
+                  xl: "25px",
+                  "2xl": "25px",
                 }}
                 fontWeight="400"
                 color="#2C4E2A"

@@ -20,30 +20,11 @@ const ReachOut = () => {
     },
   ];
   return (
-    <Box
-      w={{
-        xl: "416px",
-        "2xl": "416px",
-      }}
-    >
+    <Flex flexDirection="column" justifyContent="space-between">
       <Heading
         color="#fff"
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize={{
-          sm: "30px",
-          md: "35px",
-          lg: "45px",
-          xl: "48px",
-          "2xl": "48px",
-        }}
-        mb={{
-          sm: "10px",
-          md: "10px",
-          lg: "10px",
-          xl: "36px",
-          "2xl": "36px",
-        }}
         textAlign={{
           sm: "center",
           md: "center",
@@ -54,81 +35,86 @@ const ReachOut = () => {
       >
         Reach Out
       </Heading>
-      <Text
-        color="#fff"
-        fontFamily="Mulish"
-        fontWeight="300"
-        fontSize={{
-          sm: "18px",
-          md: "18px",
-          lg: "18px",
-          xl: "20px",
-          "2xl": "23px",
-        }}
-        textAlign={{
-          sm: "center",
-          md: "center",
-          lg: "center",
-          xl: "left",
-          "2xl": "left",
-        }}
-      >
-        2, Ahmed Onibudu Street, Victoria Island, Lagos.
-      </Text>
-
-      <Box
-        display={{
-          sm: "flex",
-          md: "flex",
-          lg: "flex",
-          xl: "block",
-          "2xl": "block",
-        }}
-        color="#fff"
-        justifyContent="center"
-        fontFamily="Mulish"
-        fontWeight="300"
-        fontSize={{
-          sm: "16px",
-          md: "16px",
-          lg: "16px",
-          xl: "20px",
-          "2xl": "23px",
-        }}
-        lineHeight="36px"
-        mt={{
-          sm: "10px",
-          md: "10px",
-          lg: "10px",
-          xl: "36px",
-          "2xl": "36px",
-        }}
-      >
-        <Text>+234 000 000 0000 </Text>
-
-        <Text
-          display={{
-            sm: "block",
-            md: "block",
-            lg: "block",
-            xl: "none",
-            "2xl": "none",
-          }}
-          px="3px"
-        >
-          |
-        </Text>
-        <Text> team@wetland.ng</Text>
-      </Box>
 
       <Flex
-        mt={{
-          sm: "24px",
-          md: "24px",
-          lg: "24px",
-          xl: "90px",
-          "2xl": "90px",
+        flexDirection="column"
+        my={{
+          sm: "20px",
+          md: "20px",
+          lg: "20px",
         }}
+        w="315px"
+        mx="auto"
+      >
+        <Text
+          color="#fff"
+          fontFamily="Mulish"
+          fontWeight="300"
+          mb={{
+            sm: "5px",
+            md: "5px",
+            lg: "5px",
+            xl: "10px",
+            "2xl": "10px",
+          }}
+          fontSize={{
+            sm: "18px",
+            md: "18px",
+            lg: "18px",
+            xl: "20px",
+            "2xl": "23px",
+          }}
+          textAlign={{
+            sm: "center",
+            md: "center",
+            lg: "center",
+            xl: "left",
+            "2xl": "left",
+          }}
+          w="315px"
+        >
+          2, Ahmed Onibudu Street, Victoria Island, Lagos.
+        </Text>
+
+        <Box
+          display={{
+            sm: "flex",
+            md: "flex",
+            lg: "flex",
+            xl: "block",
+            "2xl": "block",
+          }}
+          color="#fff"
+          justifyContent="center"
+          fontFamily="Mulish"
+          fontWeight="300"
+          fontSize={{
+            sm: "16px",
+            md: "16px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "23px",
+          }}
+        >
+          <Text>+234 000 000 0000 </Text>
+
+          <Text
+            display={{
+              sm: "block",
+              md: "block",
+              lg: "block",
+              xl: "none",
+              "2xl": "none",
+            }}
+            px="3px"
+          >
+            |
+          </Text>
+          <Text> team@wetland.ng</Text>
+        </Box>
+      </Flex>
+
+      <Flex
         justifyContent={{
           sm: "center",
           md: "center",
@@ -136,6 +122,7 @@ const ReachOut = () => {
           xl: "left",
           "2xl": "left",
         }}
+        mt="20px"
       >
         {socialMedia.map((media, index) => {
           return (
@@ -174,7 +161,7 @@ const ReachOut = () => {
           "2xl": "none",
         }}
       />
-    </Box>
+    </Flex>
   );
 };
 
