@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    id: "education",
+    id: "#education",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/graduation-cap_2_1_dstb14.png",
     title: "Education",
     bg1: "rgba(66, 174, 97, 0.15)",
@@ -55,7 +55,7 @@ export const PROJECTS = [
   },
 
   {
-    id: "youth-empowerment",
+    id: "#youth-empowerment",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/protest_1_lvqq9i.png",
     title: "Youth Empowerment",
     bg1: "rgba(236, 173, 56, 0.15)",
@@ -110,7 +110,7 @@ export const PROJECTS = [
   },
 
   {
-    id: "tvet",
+    id: "#tvet",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/technical-support_2_hrqgi7.png",
     title: "TVET",
     bg1: "rgba(22, 115, 240, 0.15)",
@@ -165,7 +165,7 @@ export const PROJECTS = [
   },
 
   {
-    id: "community-dev",
+    id: "#community-dev",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/team_1_tdwdf4.png",
     title: "Community Development",
     bg1: "rgba(89, 8, 117, 0.15)",
@@ -220,7 +220,7 @@ export const PROJECTS = [
   },
 
   {
-    id: "healthcare",
+    id: "#healthcare",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/heart-beat_1_pvdpqw.png",
     title: "Healthcare",
     bg: "rgba(229, 40, 54, 0.15)",
@@ -277,5 +277,5 @@ export const PROJECTS = [
 
 export const projectHref = [];
 PROJECTS.forEach((href) => {
-  projectHref.push(href.id);
+  return href.id;
 });

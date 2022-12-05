@@ -5,6 +5,7 @@ import Home from "Pages/Home/Index";
 import Partners from "Pages/Partners/Index";
 import Profile from "Pages/Profile/Index";
 import SearchResult from "Pages/SearchResult";
+import "./App.css";
 
 function App() {
   const breakpoints = {

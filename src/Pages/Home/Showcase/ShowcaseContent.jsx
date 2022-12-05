@@ -13,9 +13,9 @@ const ShowcaseContent = () => {
       bg: "#2C4E2A",
       name: "Partner",
       color: "white",
-      hoverBg: "#142413",
-      hoverBorder: "#142413",
-      hoverColor: "#BDE3AB",
+      hoverBg: "#163814",
+      hoverBorder: "#163814",
+      hoverColor: "#EBEDEF",
       to: () => {
         navigate("/partners", { replace: true });
       },
@@ -23,7 +23,7 @@ const ShowcaseContent = () => {
     {
       bg: "#FFF",
       name: "Donate",
-      hoverBg: "#EBEDEF",
+      hoverBg: "#F1F2F3",
       to: () => {
         navigate("#", { replace: true });
       },
@@ -301,6 +301,14 @@ const ShowcaseContent = () => {
                   color: donate.hoverColor,
                   border: `2px solid ${donate.hoverBorder}`,
                 }}
+                _active={{
+                  bg: donate.hoverBg,
+                  color: donate.hoverColor,
+                  border: `2px solid ${donate.hoverBorder}`,
+                }}
+                _focusVisible={{
+                  boxShadow: "none",
+                }}
               >
                 {donate.name}
               </Button>
@@ -316,7 +324,7 @@ const ShowcaseContent = () => {
           alignItems="center"
           mb="84px"
           mt="50px"
-          overflowX="scroll"
+          className="thematic-areas"
         >
           {partners.map((partner, index) => {
             return (
@@ -338,6 +346,7 @@ const ShowcaseContent = () => {
                   xl: partner.height.xl,
                   "2xl": partner.height.xL,
                 }}
+                m="auto"
               />
             );
           })}

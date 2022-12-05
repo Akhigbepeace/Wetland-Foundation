@@ -1,44 +1,12 @@
 import { Box, Flex, Grid, Heading, Image } from "@chakra-ui/react";
 import React from "react";
-import { projectHref } from "data/project";
-import { Link } from "react-router-dom";
+import { PROJECTS } from "data/project";
 
 const Project = () => {
-  const projects = [
-    {
-      id: projectHref[0],
-      icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/graduation-cap_2_1_dstb14.png",
-      title: "Education",
-      bg: "rgba(66, 174, 97, 0.15)",
-    },
-    {
-      id: projectHref[1],
-      icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/protest_1_lvqq9i.png",
-      title: "Youth Empowerment",
-      bg: "rgba(236, 173, 56, 0.15)",
-    },
-    {
-      id: projectHref[2],
-      icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/technical-support_2_hrqgi7.png",
-      title: "TVET",
-      bg: "rgba(22, 115, 240, 0.15)",
-    },
-    {
-      id: projectHref[3],
-      icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/team_1_tdwdf4.png",
-      title: "Community Development",
-      bg: "rgba(89, 8, 117, 0.15)",
-    },
-    {
-      id: projectHref[4],
-      icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/heart-beat_1_pvdpqw.png",
-      title: "Healthcare",
-      bg: "rgba(229, 40, 54, 0.15)",
-    },
-  ];
-
-  console.log(projectHref[4]);
-
+  const scroll = (id) => {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <Grid
       gridTemplateColumns={{
@@ -59,11 +27,10 @@ const Project = () => {
       mx="auto"
       mb="20px"
     >
-      {projects.map((project, index) => {
+      {PROJECTS.map((project, index) => {
         return (
-          <Link href={project.id}>
+          <Box key={index} onClick={() => scroll(project.id)} cursor="pointer">
             <Flex
-              key={index}
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
@@ -75,7 +42,7 @@ const Project = () => {
               mx="auto"
             >
               <Box
-                bg={project.bg}
+                bg={project.bg1}
                 display="block"
                 w="50px"
                 p="10px"
@@ -93,7 +60,7 @@ const Project = () => {
                 {project.title}
               </Heading>
             </Flex>
-          </Link>
+          </Box>
         );
       })}
     </Grid>

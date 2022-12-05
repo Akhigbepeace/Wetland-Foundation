@@ -1,0 +1,14 @@
+.thematic-areas {
+  overflow-x: auto;
+}
+::-webkit-scrollbar {
+  display: none;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+::-webkit-scrollbar:hover {
+  visibility: visible;
+}
