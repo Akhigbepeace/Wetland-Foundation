@@ -69,7 +69,12 @@ const MobileNavbar = () => {
             cursor: "pointer",
           }}
         />
-        <Box onClick={onOpen}>
+        <Box
+          onClick={onOpen}
+          _hover={{
+            cursor: "pointer",
+          }}
+        >
           <Box w="28px" h="3px" bg="#2C4E2A" />
           <Box w="28px" h="3px" bg="#2C4E2A" my="5px" />
           <Box w="28px" h="3px" bg="#2C4E2A" />
@@ -98,11 +103,17 @@ const MobileNavbar = () => {
             md: "345px",
           }}
         >
-          <ModalCloseButton bg="#2C4E2A" color="white" />
+          <ModalCloseButton
+            bg="#2C4E2A"
+            color="white"
+            _hover={{
+              bg: "#142413",
+            }}
+          />
           <ModalBody>
             <Flex flexDir="column" mt="15vh">
               <Flex flexDirection="column" alignItems="center" mb="40px">
-                {navLinks.map((navLink, index) => {
+                {navLinks.map((navLink, index) => { 
                   return (
                     <Link
                       key={index}

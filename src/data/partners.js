@@ -128,6 +128,7 @@ const PROJECTS = [
       },
     ],
   },
+
   {
     projectName: "Youth Empowerment",
     content: [
@@ -253,6 +254,7 @@ const PROJECTS = [
       },
     ],
   },
+
   {
     projectName: "TVET",
     content: [
@@ -378,6 +380,7 @@ const PROJECTS = [
       },
     ],
   },
+
   {
     projectName: "Community Development",
     content: [
@@ -503,6 +506,7 @@ const PROJECTS = [
       },
     ],
   },
+
   {
     projectName: "Healthcare",
     content: [

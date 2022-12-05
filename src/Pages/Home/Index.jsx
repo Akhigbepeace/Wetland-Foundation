@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import React, { Fragment } from "react";
+import { Box, Flex, Image } from "@chakra-ui/react";
+import React from "react";
 import Navbar from "component/Navbar";
 import Showcase from "Pages/Home/Showcase/Index";
 import Project from "Pages/Home/Project";
@@ -8,9 +8,35 @@ import ProjectDesc from "./ProjectDesc";
 import FAQs from "Pages/Home/FAQs";
 import Footer from "component/Footer/index";
 import MobileProjectDesc from "./MobileProjectDesc";
+import desktopMap from "assets/desktopMap.png";
 const Index = () => {
   return (
-    <Fragment>
+    <Box position="relative">
+      <Flex
+        justifyContent="right"
+        w={{
+          xl: "100%",
+          "2xl": "1300px",
+        }}
+        mx="auto"
+      >
+        <Image
+          src={desktopMap}
+          alt="desktopMap"
+          position="absolute"
+          zIndex="-5"
+          w="700px"
+          h="800px"
+          objectFit="cover"
+          display={{
+            sm: "none",
+            md: "none",
+            lg: "none",
+            xl: "block",
+            "2xl": "block",
+          }}
+        />
+      </Flex>
       <Navbar />
       <Showcase />
       <Project />
@@ -20,7 +46,7 @@ const Index = () => {
       <MobileProjectDesc />
       <FAQs />
       <Footer />
-    </Fragment>
+    </Box>
   );
 };
 export default Index;
