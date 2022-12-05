@@ -82,7 +82,6 @@ const MobilePartnerSelector = ({
                   key={index}
                   value={partnerName}
                   defaultValue={partnerName === currentPartner.partnerName}
-                  // onClick={() => setCurrentPartner(partnerMap[partnerName])}
                   style={{
                     fontFamily: "Mulish",
                     fontWeight: "400",

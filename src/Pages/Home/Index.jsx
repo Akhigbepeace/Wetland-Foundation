@@ -25,7 +25,7 @@ const Index = () => {
           alt="desktopMap"
           position="absolute"
           zIndex="-5"
-          w="700px"
+          w="750px"
           h="800px"
           objectFit="cover"
           display={{

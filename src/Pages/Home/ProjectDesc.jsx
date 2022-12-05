@@ -16,7 +16,6 @@ const ProjectDesc = () => {
 
   const donates = [
     {
-      // rightMargin: "0",
       bg: "#2C4E2A",
       name: "Donate",
       color: "white",
@@ -28,7 +27,6 @@ const ProjectDesc = () => {
       },
     },
     {
-      // rightMargin: "25px",
       bg: "#FFF",
       name: "Share Project",
       hoverBg: "#EBEDEF",
@@ -58,7 +56,7 @@ const ProjectDesc = () => {
     >
       {PROJECTS.map((item, index) => {
         return (
-          <Box key={index} my="100px">
+          <Box key={index} my="100px" id={item.id} className={item.id}>
             <Flex h="154px">
               <Box w="20px" bg={item.bg2} />
 
@@ -100,7 +98,10 @@ const ProjectDesc = () => {
               >
                 {item.projectData.map((data, index) => {
                   return (
-                    <Box key={index} boxShadow="0px 10px 20px rgba(0, 0, 0, 0.25">
+                    <Box
+                      key={index}
+                      boxShadow="0px 10px 20px rgba(0, 0, 0, 0.25"
+                    >
                       <Image
                         src={data.pic}
                         alt="project-image"
