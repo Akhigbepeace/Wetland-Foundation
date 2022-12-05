@@ -30,10 +30,7 @@ const Index = () => {
           objectFit="cover"
           display={{
             sm: "none",
-            md: "none",
-            lg: "none",
             xl: "block",
-            "2xl": "block",
           }}
         />
       </Flex>
