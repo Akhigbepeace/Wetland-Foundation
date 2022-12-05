@@ -1,78 +1,62 @@
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Donate = () => {
   return (
-    <Box
-      display={{
-        sm: "flex",
-        md: "flex",
-        lg: "flex",
-        xl: "block",
-        "2xl": "block",
-      }}
+    <Flex
       flexDirection="column"
-      alignItems="center"
-      w={{
-        xl: "416px",
-        "2xl": "416px",
+      alignItems={{
+        sm: "center",
+        md: "center",
+        lg: "center",
+        xl: "flex-start",
+        "2xl": "flex-start",
       }}
-      px={{
-        xl: "25px",
-        "2xl": "25px",
-      }}
+      justifyContent="space-between"
     >
-      <Heading
-        fontFamily="Mulish"
-        fontWeight="800"
-        fontSize={{
-          sm: "30px",
-          md: "35px",
-          lg: "45px",
-          xl: "48px",
-          "2xl": "48px",
-        }}
-        color="white"
-        textAlign={{
-          sm: "center",
-          md: "center",
-          lg: "center",
-          xl: "left",
-          "2xl": "left",
-        }}
-      >
-        Donate
-      </Heading>
-      <Text
-        mt={{
-          sm: "10px",
-          md: "18px",
-          lg: "28px",
-          xl: "36px",
-          "2xl": "36px",
-        }}
-        fontFamily="Mulish"
-        fontWeight="500"
-        fontSize={{
-          sm: "18px",
-          md: "18px",
-          lg: "18px",
-          xl: "20px",
-          "2xl": "23px",
-        }}
-        color="white"
-        textAlign={{
-          sm: "center",
-          md: "center",
-          lg: "center",
-          xl: "left",
-          "2xl": "left",
-        }}
-      >
-        All Entities depend on the financial support of donors like you in order
-        to complete the various projects. Donation of any size is very much
-        encouraged.
-      </Text>
+      <Box>
+        <Heading
+          fontFamily="Mulish"
+          fontWeight="800"
+          color="white"
+          textAlign={{
+            sm: "center",
+            md: "center",
+            lg: "center",
+            xl: "left",
+            "2xl": "left",
+          }}
+        >
+          Donate
+        </Heading>
+
+        <Text
+          w="315px"
+          my="20px"
+          fontFamily="Mulish"
+          fontWeight="500"
+          fontSize={{
+            sm: "18px",
+            md: "18px",
+            lg: "18px",
+            xl: "20px",
+            "2xl": "23px",
+          }}
+          color="white"
+          textAlign={{
+            sm: "center",
+            md: "center",
+            lg: "center",
+            xl: "left",
+            "2xl": "left",
+          }}
+        >
+          All Entities depend on the financial support of donors like you in
+          order to complete the various projects. Donation of any size is very
+          much encouraged.
+        </Text>
+      </Box>
+
       <Button
         bg="#FFF"
         color="#2C4E2A"
@@ -100,10 +84,10 @@ const Donate = () => {
           xl: "55px",
           "2xl": "65px",
         }}
-        mt="50px"
       >
         Donate
       </Button>
+
       <Box
         w="100%"
         h="2px"
@@ -118,7 +102,7 @@ const Donate = () => {
           "2xl": "none",
         }}
       />
-    </Box>
+    </Flex>
   );
 };
 

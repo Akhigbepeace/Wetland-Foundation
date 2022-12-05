@@ -1,5 +1,6 @@
 export const PROJECTS = [
   {
+    id: "education",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/graduation-cap_2_1_dstb14.png",
     title: "Education",
     bg1: "rgba(66, 174, 97, 0.15)",
@@ -32,10 +33,29 @@ export const PROJECTS = [
         by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
         goal: "#10M",
       },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_2_zrxruq.png",
+        name: "Wavecrest College of Hospitality",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/Women_s_board_logo_vdqawj.png",
+        goal: "#10M",
+      },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_1_uihr8i.png",
+        name: "Hillrange Senior School",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
+        goal: "#10M",
+      },
     ],
   },
 
   {
+    id: "youth-empowerment",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/protest_1_lvqq9i.png",
     title: "Youth Empowerment",
     bg1: "rgba(236, 173, 56, 0.15)",
@@ -68,10 +88,29 @@ export const PROJECTS = [
         by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
         goal: "#10M",
       },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_2_zrxruq.png",
+        name: "Wavecrest College of Hospitality",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/Women_s_board_logo_vdqawj.png",
+        goal: "#10M",
+      },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_1_uihr8i.png",
+        name: "Hillrange Senior School",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
+        goal: "#10M",
+      },
     ],
   },
 
   {
+    id: "tvet",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/technical-support_2_hrqgi7.png",
     title: "TVET",
     bg1: "rgba(22, 115, 240, 0.15)",
@@ -104,15 +143,52 @@ export const PROJECTS = [
         by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
         goal: "#10M",
       },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_2_zrxruq.png",
+        name: "Wavecrest College of Hospitality",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/Women_s_board_logo_vdqawj.png",
+        goal: "#10M",
+      },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_1_uihr8i.png",
+        name: "Hillrange Senior School",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
+        goal: "#10M",
+      },
     ],
   },
 
   {
+    id: "community-dev",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/team_1_tdwdf4.png",
-    title: "Community Developmet",
+    title: "Community Development",
     bg1: "rgba(89, 8, 117, 0.15)",
     bg2: "#590875",
     projectData: [
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_1_uihr8i.png",
+        name: "Hillrange Senior School",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
+        goal: "#10M",
+      },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_2_zrxruq.png",
+        name: "Wavecrest College of Hospitality",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/Women_s_board_logo_vdqawj.png",
+        goal: "#10M",
+      },
       {
         pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
         logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_1_uihr8i.png",
@@ -144,6 +220,7 @@ export const PROJECTS = [
   },
 
   {
+    id: "healthcare",
     icon: "https://res.cloudinary.com/wavecrest1/image/upload/v1666785163/wetland/heart-beat_1_pvdpqw.png",
     title: "Healthcare",
     bg: "rgba(229, 40, 54, 0.15)",
@@ -176,6 +253,29 @@ export const PROJECTS = [
         by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
         goal: "#10M",
       },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_2_zrxruq.png",
+        name: "Wavecrest College of Hospitality",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/Women_s_board_logo_vdqawj.png",
+        goal: "#10M",
+      },
+      {
+        pic: "https://res.cloudinary.com/wavecrest1/image/upload/v1666804763/wetland/Rectangle_90_hiccyb.png",
+        logo: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805114/wetland/images_-_2021-04-15T111958_1_uihr8i.png",
+        name: "Hillrange Senior School",
+        desc: "Following the completion of the Hillrange Junior School, I.E.F. is now undertaking the construction of the Hillrange Senior School which would consist of classrooms, offices, laboratories and a computer room.",
+        duration: "2 years",
+        by: "https://res.cloudinary.com/wavecrest1/image/upload/v1666805115/wetland/image_4_p5ckvi.png",
+        goal: "#10M",
+      },
     ],
   },
 ];
+
+export const projectHref = [];
+PROJECTS.forEach((href) => {
+  projectHref.push(href.id);
+});

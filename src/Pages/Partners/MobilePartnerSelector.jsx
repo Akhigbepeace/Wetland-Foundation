@@ -3,13 +3,10 @@ import React from "react";
 import { PROJECT_NAMES } from "data/partners";
 
 const MobilePartnerSelector = ({
-  setCurrentPartnerNames,
   currentPartnerNames,
-  setPartnerMap,
   setCurrentPartner,
   partnerMap,
   currentPartner,
-  setCurrentProject,
   setProjectDetails,
 }) => {
   return (
@@ -38,6 +35,10 @@ const MobilePartnerSelector = ({
             fontWeight="400"
             fontSize="20px"
             color="#2C4E2A"
+            onChange={(e) => {
+              const projectName = e.target.value;
+              setProjectDetails(projectName);
+            }}
           >
             {PROJECT_NAMES.map((projectName, index) => {
               return (
@@ -80,8 +81,8 @@ const MobilePartnerSelector = ({
                 <option
                   key={index}
                   value={partnerName}
-                  selected={partnerName === currentPartner.partnerName}
-                  onClick={() => setCurrentPartner(partnerMap[partnerName])}
+                  defaultValue={partnerName === currentPartner.partnerName}
+                  // onClick={() => setCurrentPartner(partnerMap[partnerName])}
                   style={{
                     fontFamily: "Mulish",
                     fontWeight: "400",

@@ -73,13 +73,6 @@ const Newsletter = () => {
       <Heading
         fontFamily="Mulish"
         fontWeight="800"
-        fontSize={{
-          sm: "30px",
-          md: "35px",
-          lg: "45px",
-          xl: "48px",
-          "2xl": "48px",
-        }}
         textAlign={{
           sm: "center",
           md: "center",
@@ -88,7 +81,6 @@ const Newsletter = () => {
           "2xl": "left",
         }}
         color="white"
-        mb="28px"
       >
         Sign Up for Our Newsletter
       </Heading>
@@ -109,7 +101,8 @@ const Newsletter = () => {
                 color="white"
                 fontFamily="Mulish"
                 mt="23px"
-                h="85px"
+                h="73px"
+                w="100%"
                 onChange={inputValues}
                 focusBorderColor="#FFF"
                 _placeholder={{
@@ -122,22 +115,40 @@ const Newsletter = () => {
             );
           })}
         </Stack>
-
-        <Button
-          type="submit"
-          bg="#FFF"
-          color="#2C4E2A"
-          w="207px"
-          borderRadius="5px"
-          fontFamily="Mulish"
-          fontWeight="400"
-          fontSize="28px"
-          h="65px"
-          mt="20px"
-        >
-          Sign Up
-        </Button>
       </form>
+
+      <Button
+        type="submit"
+        bg="#FFF"
+        color="#2C4E2A"
+        w={{
+          sm: "106px",
+          md: "135px",
+          lg: "150px",
+          xl: "207px",
+          "2xl": "207px",
+        }}
+        borderRadius="5px"
+        fontFamily="Mulish"
+        fontWeight="400"
+        fontSize={{
+          sm: "15px",
+          md: "17px",
+          lg: "20px",
+          xl: "24px",
+          "2xl": "24px",
+        }}
+        h={{
+          sm: "38px",
+          md: "38px",
+          lg: "50px",
+          xl: "55px",
+          "2xl": "65px",
+        }}
+        mt="20px"
+      >
+        Sign Up
+      </Button>
 
       <Box
         w="100%"
